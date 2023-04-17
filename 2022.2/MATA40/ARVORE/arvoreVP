@@ -1,0 +1,848 @@
+ARVORES VERMELHA E PRETA OU ARVORE RUBRO NEGRAS.
+
+link's vermelhos sempre à esquerda.
+altura negra: quantidade de link's negros que nós utilizamos para passar um NÓ
+NÃO PODE TER 2 LINK'S rubros em seguida
+
+VANTAGENS: todos os algoritmos usados em arvores de busca também podem ser usados em árvores rubro-negras
+dizer se o link para esquerda ou o link para a direita é vermelho ou preto
+a chegada do link vermelho será o NÓ vermelho.
+
+Todo nó da arvore é "vermelho" ou "preto".
+A raiz é sempre preta.
+Todo Nó folha NULL é "preto".
+se um NÓ é "vermelho", então os seus filhos são "pretos".
+
+AVL vs VP
+
+AVL: mais rápida no processo de busca
+VP: mais rápida no processo de remoção e inserção
+
+TAD
+
+typedef enmu{
+  C_RED,
+  C_BLACK;
+}ARN_COR;
+
+typedef struct ARN{
+  struct ARN *left;
+  struct ARN *right;
+  int valor;
+  int chave;
+  ARN_COR cor;
+}ARN;
+
+static ARN *ARN_Criar(int chave, int valor){
+  ARN* novo;
+  novo = malloc(sizeof(ARN));
+  novo->chave = chave;
+  novo->valor = valor;
+  novo->cor = C_VERMELHO;
+  novo->left = NULL;
+  novo->right = NULL;
+  
+  return novo;
+}
+
+static inline int eh_vermelho(ARN *A){
+  if(A == NULL){
+    return 0;
+   } return A->cor == C_VERMELHO ? 1 : 0;
+}
+
+static void inverter_cores(ARN *A){
+  A->cor = C_VERMELHO;
+  A->left->cor = C_PRETO;
+  A->right->cor = C_PRETO;
+}
+
+static void rot_left(ARN **A){
+  ARN *h, *x;
+  h = *A;
+  x = h->right;
+  h->right = x->left;
+  x->left = h;
+  x ->cor = h->cor;
+  h->cor = C_VERMELHO;
+  *A = x;
+}
+
+static void rot_right(ARN **A){
+  ARN *h, *x;
+  h = *A;
+  x = h->left;
+  h->letf = x->right;
+  x->right = h;
+  x ->cor = h->cor;
+  h->cor = C_VERMELHO;
+  *A = x;
+}
+
+
+
+void ARN_inserir_R(ARN **A, int chave, int valor){
+  if(*A == NULL){
+    *A = ARN_Criar(chave, valor);
+    return;
+  }
+  if(chave < (*A)->chave){
+    ARN_Inserir_R(&(*A)->left, chave, valor);
+  }
+  if(chave > (*A)->chave){
+   ARN_Inserir_R(&(*A)->right, chave, valor);
+  }
+  
+  if(eh_vermelho((*A)->right && !eh_vermelho((*A)->left)){
+    rot_left(A);
+  }
+  
+  if(eh_vermelho((*A)->left && eh_vermelho((*A)->left->left)){
+    rot_right(A);
+  }
+  
+  if(eh_vermelho((*A)->left && eh_vermelho((*A)->right)){
+    inverter_cores(*A);
+  }
+  
+} 
+
+void ARN_inserir(ARN **A, int chave, int valor){
+  ARN_inserir_R(A, chave, valor);
+  (*A)->cor = C_PRETO;
+}
+
+
+int main(int argc, char** argv){
+  ARN *A = NULL;
+  ARN_Inserir(&A, (int)'U', 0);
+  ARN_ImprimirC(A, 0, 'r');
+  ARN_Inserir(&A, (int)'T', 0);
+  ARN_ImprimirC(A, 0, 'r');
+  ARN_Inserir(&A, (int)'F', 0);
+  ARN_ImprimirC(A, 0, 'r');
+  ARN_Inserir(&A, (int)'P', 0);
+  ARN_ImprimirC(A, 0, 'r');
+  ARN_Inserir(&A, (int)'R', 0);
+  ARN_ImprimirC(A, 0, 'r');
+}
+
+
+
+
+ARVORE RB EDICAO-FINAL
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//COR DO NÓ
+enum nodeColor {
+  RED,
+  BLACK
+};
+
+
+struct rbNode {
+  int data, color;
+  struct rbNode *link[2];
+};
+
+struct rbNode *root = NULL; 
+
+// Create a red-black tree
+struct rbNode *createNode(int data) {
+  struct rbNode *newnode = (struct rbNode *)malloc(sizeof(struct rbNode));
+  newnode->data = data;
+  newnode->color = RED; //já entra como vermelho
+  newnode->link[0] = newnode->link[1] = NULL;
+  return newnode;
+}
+
+
+
+// Inserir em um Nó
+void insertion(int data) {      //10 -> 20
+  struct rbNode *stack[98];
+  struct rbNode *ptr;
+  struct rbNode *newnode;
+  struct rbNode *xPtr;
+  struct rbNode *yPtr;
+  int dir[98];
+  int ht = 0;
+  int index;
+  ptr = root;
+  //se a raiz nao existir, então criar uma raiz
+  if (root == NULL) {
+    root = createNode(data);
+    return;
+  }
+
+  stack[ht] = root;
+  dir[ht++] = 0;
+  while (ptr != NULL) { //20
+    if (ptr->data == data) { //Se o valor que eu immplementar for igual
+      printf("Duplicates Not Allowed!!\n");
+      return;
+    }
+    index = (data - ptr->data) > 0 ? 1 : 0;
+    stack[ht] = ptr;
+    ptr = ptr->link[index];
+    dir[ht++] = index;
+  }
+  stack[ht - 1]->link[index] = newnode = createNode(data);
+  while ((ht >= 3) && (stack[ht - 1]->color == RED)) {
+    if (dir[ht - 2] == 0) {
+      yPtr = stack[ht - 2]->link[1];
+      if (yPtr != NULL && yPtr->color == RED) {
+        stack[ht - 2]->color = RED;
+        stack[ht - 1]->color = yPtr->color = BLACK;
+        ht = ht - 2;
+      } else {
+        if (dir[ht - 1] == 0) {
+          yPtr = stack[ht - 1];
+        } else {
+          xPtr = stack[ht - 1];
+          yPtr = xPtr->link[1];
+          xPtr->link[1] = yPtr->link[0];
+          yPtr->link[0] = xPtr;
+          stack[ht - 2]->link[0] = yPtr;
+        }
+        xPtr = stack[ht - 2];
+        xPtr->color = RED;
+        yPtr->color = BLACK;
+        xPtr->link[0] = yPtr->link[1];
+        yPtr->link[1] = xPtr;
+        if (xPtr == root) {
+          root = yPtr;
+        } else {
+          stack[ht - 3]->link[dir[ht - 3]] = yPtr;
+        }
+        break;
+      }
+    } else {
+      yPtr = stack[ht - 2]->link[0];
+      if ((yPtr != NULL) && (yPtr->color == RED)) {
+        stack[ht - 2]->color = RED;
+        stack[ht - 1]->color = yPtr->color = BLACK;
+        ht = ht - 2;
+      } else {
+        if (dir[ht - 1] == 1) {
+          yPtr = stack[ht - 1];
+        } else {
+          xPtr = stack[ht - 1];
+          yPtr = xPtr->link[0];
+          xPtr->link[0] = yPtr->link[1];
+          yPtr->link[1] = xPtr;
+          stack[ht - 2]->link[1] = yPtr;
+        }
+        xPtr = stack[ht - 2];
+        yPtr->color = BLACK;
+        xPtr->color = RED;
+        xPtr->link[1] = yPtr->link[0];
+        yPtr->link[0] = xPtr;
+        if (xPtr == root) {
+          root = yPtr;
+        } else {
+          stack[ht - 3]->link[dir[ht - 3]] = yPtr;
+        }
+        break;
+      }
+    }
+  }
+  root->color = BLACK;
+}
+
+// Print the inorder traversal of the tree
+void inorderTraversal(struct rbNode *node, int level) {
+  if (node) {
+    inorderTraversal(node->link[0], level +1);
+    printf("\n\n");
+    for(int i = 0; i < level; i++){
+      printf("\t");
+    }
+    printf("%d  ", node->data);
+    inorderTraversal(node->link[1], level + 1);
+  }
+  return;
+}
+
+// Driver code
+int main() {
+  int option, data;
+  while (1) {
+    printf("1. Insertion\t2. Deletion\n");
+    printf("3. Traverse\t4. Exit");
+    printf("\nEnter your choice:");
+    scanf("%d", &option);
+    switch (option) {
+      case 1:
+        printf("Enter the element to insert:");
+        scanf("%d", &data);
+        insertion(data);
+        break;
+      case 2:
+        printf("Enter the element to delete:");
+        scanf("%d", &data);
+       // deletion(data);
+        break;
+      case 3:
+        inorderTraversal(root, 1);
+        printf("\n");
+        break;
+      case 4:
+        exit(0);
+      default:
+        printf("Not available\n");
+        break;
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+
+
+//SEGUNDA EDICAO DO CODIGO
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//COR DO NÓ
+enum nodeColor {
+  RED,
+  BLACK
+};
+
+
+struct rbNode {
+  int data, color;
+  struct rbNode *link[2];
+};
+
+struct rbNode *root = NULL; 
+
+//funcao para pegar qtd de NO
+int quantidade(){
+    
+}
+
+//funcao para pegar a altura do NO
+int altura(){
+    
+}
+
+//funcao para percorrer a arvore e pegar o fator de balanceamento de cada No
+
+
+//funcao para pegar o fator de balanceamento da raiz
+
+// Create a red-black tree
+struct rbNode *createNode(int data) {
+  struct rbNode *newnode = (struct rbNode *)malloc(sizeof(struct rbNode));
+  newnode->data = data;
+  newnode->color = RED; //já entra como vermelho
+  newnode->link[0] = newnode->link[1] = NULL;
+  return newnode;
+}
+
+
+
+// Inserir em um Nó
+void insertion(int data) {      //10 -> 20
+  struct rbNode *stack[98];
+  struct rbNode *ptr;
+  struct rbNode *newnode;
+  struct rbNode *xPtr;
+  struct rbNode *yPtr;
+  int dir[98];
+  int ht = 0;
+  int index;
+  ptr = root;
+  //se a raiz nao existir, então criar uma raiz
+  if (root == NULL) {
+    root = createNode(data);
+    return;
+  }
+
+  stack[ht] = root;
+  dir[ht++] = 0;
+  while (ptr != NULL) { //20
+    if (ptr->data == data) { //Se o valor que eu immplementar for igual
+      printf("Duplicates Not Allowed!!\n");
+      return;
+    }
+    index = (data - ptr->data) > 0 ? 1 : 0;
+    stack[ht] = ptr;
+    ptr = ptr->link[index];
+    dir[ht++] = index;
+  }
+  stack[ht - 1]->link[index] = newnode = createNode(data);
+  while ((ht >= 3) && (stack[ht - 1]->color == RED)) {
+    if (dir[ht - 2] == 0) {
+      yPtr = stack[ht - 2]->link[1];
+      if (yPtr != NULL && yPtr->color == RED) {
+        stack[ht - 2]->color = RED;
+        stack[ht - 1]->color = yPtr->color = BLACK;
+        ht = ht - 2;
+      } else {
+        if (dir[ht - 1] == 0) {
+          yPtr = stack[ht - 1];
+        } else {
+          xPtr = stack[ht - 1];
+          yPtr = xPtr->link[1];
+          xPtr->link[1] = yPtr->link[0];
+          yPtr->link[0] = xPtr;
+          stack[ht - 2]->link[0] = yPtr;
+        }
+        xPtr = stack[ht - 2];
+        xPtr->color = RED;
+        yPtr->color = BLACK;
+        xPtr->link[0] = yPtr->link[1];
+        yPtr->link[1] = xPtr;
+        if (xPtr == root) {
+          root = yPtr;
+        } else {
+          stack[ht - 3]->link[dir[ht - 3]] = yPtr;
+        }
+        break;
+      }
+    } else {
+      yPtr = stack[ht - 2]->link[0];
+      if ((yPtr != NULL) && (yPtr->color == RED)) {
+        stack[ht - 2]->color = RED;
+        stack[ht - 1]->color = yPtr->color = BLACK;
+        ht = ht - 2;
+      } else {
+        if (dir[ht - 1] == 1) {
+          yPtr = stack[ht - 1];
+        } else {
+          xPtr = stack[ht - 1];
+          yPtr = xPtr->link[0];
+          xPtr->link[0] = yPtr->link[1];
+          yPtr->link[1] = xPtr;
+          stack[ht - 2]->link[1] = yPtr;
+        }
+        xPtr = stack[ht - 2];
+        yPtr->color = BLACK;
+        xPtr->color = RED;
+        xPtr->link[1] = yPtr->link[0];
+        yPtr->link[0] = xPtr;
+        if (xPtr == root) {
+          root = yPtr;
+        } else {
+          stack[ht - 3]->link[dir[ht - 3]] = yPtr;
+        }
+        break;
+      }
+    }
+  }
+  root->color = BLACK;
+}
+
+// Print the inorder traversal of the tree
+void inorderTraversal(struct rbNode *node, int level) {
+  if (node) {
+    inorderTraversal(node->link[0], level +1);
+    printf("\n\n");
+    for(int i = 0; i < level; i++){
+      printf("\t");
+    }
+    printf("%d  ", node->data);
+    inorderTraversal(node->link[1], level + 1);
+  }
+  return;
+}
+
+// Driver code
+int main() {
+  int option, data;
+  while (1) {
+    printf("1. Insertion\t2. Deletion\n");
+    printf("3. Traverse\t4. Exit");
+    printf("\nEnter your choice:");
+    scanf("%d", &option);
+    switch (option) {
+      case 1:
+        printf("Enter the element to insert:");
+        scanf("%d", &data);
+        insertion(data);
+        break;
+      case 2:
+        printf("Enter the element to delete:");
+        scanf("%d", &data);
+       // deletion(data);
+        break;
+      case 3:
+        inorderTraversal(root, 1);
+        printf("\n");
+        break;
+      case 4:
+        exit(0);
+      default:
+        printf("Not available\n");
+        break;
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+//terrceira edicao
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+//COR DO NÓ
+enum nodeColor {
+  RED,
+  BLACK
+};
+
+
+struct rbNode {
+  int data, color;
+  struct rbNode *link[2];
+};
+
+struct rbNode *root = NULL; 
+
+//funcao para pegar qtd de NO
+int QuantoNo(No *raiz){
+    if(raiz == NULL)
+        return 0;
+    else
+        return 1 + QuantoNo(raiz->esquerdo) + QuantoNo(raiz->direito);
+}
+
+
+//funcao para pegar a altura do NO
+int alturaDaArv(No *raiz){
+    if(raiz == NULL){
+        return -1;
+    }
+    else{
+        int left = alturaDaArv(raiz->esquerdo);
+        int right = alturaDaArv(raiz->direito);
+        if(left>right){
+            return left + 1;
+          }else{
+            return right +1;
+          }
+    }
+}
+
+//funcao para pegar o fator de balanceamento da raiz
+int fatorDeBalanceamentoo(No *no){
+    if(no){
+        int left = alturaDaArv(no->esquerdo);
+        int right = alturaDaArv(no->direito);
+        int fatbal = (left - right);
+      //printf("\n\n\tFB ATUAL :%d\n", fatbal); 
+      return fatbal;
+      }else{
+        return 0;
+      }
+      
+      /*FATOR DE BALANCEAMENTO DA RAIZ-FORMA IMPLICITADA E A QUE FUNCIONA
+       int left = alturaDaArv(raiz->esquerdo);
+    int right = alturaDaArv(raiz->direito);
+    if(left>right){
+      fatb = left - right;
+      printf("\tFATOR DE BALANCEAMENTO DA RAIZ: %d\n", fatb);
+    }else{
+      fatb = left - right;
+      printf("\tFATOR DE BALANCEAMENTO DA RAIZ: %d\n", fatb);
+    }  */
+}
+
+
+//funcao para percorrer a arvore e pegar o fator de balanceamento de cada No
+int aux7 = 0, n = 1, n1=1, n2=1;
+float NB2;
+int preOrdem(No *raiz){
+  if(raiz == NULL){
+    return;
+  }else{
+    //printf("\n\n\t %d° Nó FATOTBALANCEAMENTO: %d", n,fatorDeBalanceamentoo(raiz));
+     n++;
+    aux7 = aux7 + fatorDeBalanceamentoo(raiz);
+    //printf("\n\t %d° Nó SOMA: %d\n", n1, aux7);
+    int qtdNO = QuantoNo(raiz);
+    preOrdem(raiz->esquerdo);
+    preOrdem(raiz->direito);
+    //printf("\n\t\tQANTIDADE DE NO: %d\n", qtdNO);
+   // printf("\n\t %d° Nó SOMA FINAL: %d\n", n1, aux7);
+    //printf("\t %d° NIVEL DE BALANCEAMENTO NB: %.2f\n", n2, NB);
+    float NB = ((float)aux7/qtdNO);
+    //printf("\t %d° NIVEL DE BALANCEAMENTO NB: %.2f\n", n2, NB);
+    n1++;
+    NB2 = fmax(NB, - NB);
+    printf("\n\n\t %d° NIVEL DE BALANCEAMENTO: %.2f", n2, NB2);
+    n2++;
+  }  
+}
+
+/*funcao BALANCEAR (TALVEZ NÃO SEJA ÚTIL NESSE CÓDIGO)
+    TENTAR IMPLEMENTAR DE OUTRA FORMA
+    
+
+//FUNÇÃO BALANCEAR
+int aux = 0, num = 0, QQQ = 0, rodada = 1;
+No* balancear(No *raiz){
+  int fb = fatorDeBalanceamento(raiz);
+  QQQ = QuantoNo(raiz);
+  //printf("\n\tQuantidade De NÓ: %d", QQQ);
+    if(fb > 1 && fatorDeBalanceamento(raiz->esquerdo) >= 0)   {  //Rotação à direita
+        raiz = rotacaoDireita(raiz);
+        contador();
+        //printf("\nrotacao realizada Direita");
+        aux++;
+        //printf("\nQuantidade de rotacoes: %d", aux);
+       //printf("\n\tQuantidade de Nos da Arvore: %d\n", QQQ);
+        float MR = (aux/(float)QQQ);
+        //printf("\tMedio de Rotações: %.2f\n\n", MR); 
+ }   else if(fb < -1 && fatorDeBalanceamento(raiz->direito) <= 0){ //Rotação à esquerda
+        raiz = rotacaoEsquerda(raiz);
+        contador();
+          //printf("\n\trotacao realizada Esquerda");
+          aux++;
+       // printf("\n\tQuantidade de rotacoes: %d", aux);
+        // printf("\n\tQuantidade de Nos da Arvore: %d\n", QQQ);
+        float MR = (aux/(float)QQQ);
+        //printf("\tMedio de Rotações: %.2f\n\n", MR);
+    }else if(fb > 1 && fatorDeBalanceamento(raiz->esquerdo) < 0){ //Rotação esquerda direita
+        raiz = rotacaoEsquerdaDireita(raiz);
+         contador();
+          // printf("\n\trotacao realizada EsquerdaDireita");
+           aux = aux + 2;
+        //printf("\n\tQuantidade de rotacoes: %d", aux);
+         //printf("\n\tQuantidade de Nos da Arvore: %d\n", QQQ);
+        float MR = (aux/(float)QQQ);
+        //printf("\tMedio de Rotações: %.2f\n\n", MR);
+    }else if(fb < -1 && fatorDeBalanceamento(raiz->direito) > 0){ //Rotação direita esquerda
+        raiz = rotacaoDireitaEsquerda(raiz);
+        contador();
+        //printf("\n\trotacao realizada DireitaEsquerda");
+          aux = aux + 2;
+        //printf("\nQuantidade de rotacoes: %d", aux);
+         //printf("\n\tQuantidade de Nos da Arvore: %d\n", QQQ);
+        float MR = (aux/(float)QQQ);
+        //printf("\tMedio de Rotações: %.2f\n\n", MR);
+  }
+     float mediaRotacao = (aux/(float)QQQ);
+      printf("\n\t\n \t-> MÉDIA DE ROTAÇÕES: %.2f\n", mediaRotacao);
+    return raiz;
+}
+*/
+
+
+// Create a red-black tree
+struct rbNode *createNode(int data) {
+  struct rbNode *newnode = (struct rbNode *)malloc(sizeof(struct rbNode));
+  newnode->data = data;
+  newnode->color = RED; //já entra como vermelho
+  newnode->link[0] = newnode->link[1] = NULL;
+  return newnode;
+}
+
+
+
+// Inserir em um Nó
+void insertion(int data) {      //10 -> 20
+  struct rbNode *stack[98];
+  struct rbNode *ptr;
+  struct rbNode *newnode;
+  struct rbNode *xPtr;
+  struct rbNode *yPtr;
+  int dir[98];
+  int ht = 0;
+  int index;
+  ptr = root;
+  //se a raiz nao existir, então criar uma raiz
+  if (root == NULL) {
+    root = createNode(data);
+    return;
+  }
+
+  stack[ht] = root;
+  dir[ht++] = 0;
+  while (ptr != NULL) { //20
+    if (ptr->data == data) { //Se o valor que eu immplementar for igual
+      printf("Duplicates Not Allowed!!\n");
+      return;
+    }
+    index = (data - ptr->data) > 0 ? 1 : 0;
+    stack[ht] = ptr;
+    ptr = ptr->link[index];
+    dir[ht++] = index;
+  }
+  stack[ht - 1]->link[index] = newnode = createNode(data);
+  while ((ht >= 3) && (stack[ht - 1]->color == RED)) {
+    if (dir[ht - 2] == 0) {
+      yPtr = stack[ht - 2]->link[1];
+      if (yPtr != NULL && yPtr->color == RED) {
+        stack[ht - 2]->color = RED;
+        stack[ht - 1]->color = yPtr->color = BLACK;
+        ht = ht - 2;
+      } else {
+        if (dir[ht - 1] == 0) {
+          yPtr = stack[ht - 1];
+        } else {
+          xPtr = stack[ht - 1];
+          yPtr = xPtr->link[1];
+          xPtr->link[1] = yPtr->link[0];
+          yPtr->link[0] = xPtr;
+          stack[ht - 2]->link[0] = yPtr;
+        }
+        xPtr = stack[ht - 2];
+        xPtr->color = RED;
+        yPtr->color = BLACK;
+        xPtr->link[0] = yPtr->link[1];
+        yPtr->link[1] = xPtr;
+        if (xPtr == root) {
+          root = yPtr;
+        } else {
+          stack[ht - 3]->link[dir[ht - 3]] = yPtr;
+        }
+        break;
+      }
+    } else {
+      yPtr = stack[ht - 2]->link[0];
+      if ((yPtr != NULL) && (yPtr->color == RED)) {
+        stack[ht - 2]->color = RED;
+        stack[ht - 1]->color = yPtr->color = BLACK;
+        ht = ht - 2;
+      } else {
+        if (dir[ht - 1] == 1) {
+          yPtr = stack[ht - 1];
+        } else {
+          xPtr = stack[ht - 1];
+          yPtr = xPtr->link[0];
+          xPtr->link[0] = yPtr->link[1];
+          yPtr->link[1] = xPtr;
+          stack[ht - 2]->link[1] = yPtr;
+        }
+        xPtr = stack[ht - 2];
+        yPtr->color = BLACK;
+        xPtr->color = RED;
+        xPtr->link[1] = yPtr->link[0];
+        yPtr->link[0] = xPtr;
+        if (xPtr == root) {
+          root = yPtr;
+        } else {
+          stack[ht - 3]->link[dir[ht - 3]] = yPtr;
+        }
+        break;
+      }
+    }
+  }
+  root->color = BLACK;
+}
+
+// Print the inorder traversal of the tree
+void inorderTraversal(struct rbNode *node, int level) {
+  if (node) {
+    inorderTraversal(node->link[0], level +1);
+    printf("\n\n");
+    for(int i = 0; i < level; i++){
+      printf("\t");
+    }
+    printf("%d  ", node->data);
+    inorderTraversal(node->link[1], level + 1);
+  }
+  return;
+}
+
+// Driver code
+int main() {
+  int option, data;
+  while (1) {
+    printf("1. Insertion\t2. Deletion\n");
+    printf("3. Traverse\t4. Exit");
+    printf("\nEnter your choice:");
+    scanf("%d", &option);
+    switch (option) {
+      case 1:
+        printf("Enter the element to insert:");
+        scanf("%d", &data);
+        insertion(data);
+        break;
+      case 2:
+        printf("Enter the element to delete:");
+        scanf("%d", &data);
+       // deletion(data);
+        break;
+      case 3:
+        inorderTraversal(root, 1);
+        printf("\n");
+        break;
+      case 4:
+        exit(0);
+      default:
+        printf("Not available\n");
+        break;
+    }
+    printf("\n");
+  }
+  return 0;
+}
+
+
+
+/* IMPRIMIR PELO ARQUIVO.TXT
+No* prog_exp(No* raiz){
+    imprimir(raiz, 1);
+    preOrdem(raiz);
+    if((balancear(raiz)) != NULL){
+      printf("\n\n\tMEDIA DE ROTAÇÕES FINAL: ");
+      balancear(raiz);
+    }
+}
+
+
+
+int dado;
+No*  prog_print(char f[], No *raiz)
+{
+  int fatb = 0;
+    FILE *file = fopen(f, "r");
+  if(file){
+    while(fscanf(file, "%d", &dado) != -1){
+    //printf("%d\n", dado);
+    raiz = inserir(raiz, dado);
+    //imprimir(raiz, 1);
+    /*printf("\n\n\tQUANTIDADE DE NÓ DA ÁRVORE: %d", QuantoNo(raiz));
+    printf("\n\tALTURA DA ARVORE: %d\n", alturaDaArv(raiz)); */
+      
+      //FATOR DE BALANCEAMENTO DA RAIZ: EXIBIR
+  /*  int left = alturaDaArv(raiz->esquerdo);
+    int right = alturaDaArv(raiz->direito);
+    if(left>right){
+      fatb = left - right;
+      printf("\tFATOR DE BALANCEAMENTO DA RAIZ: %d\n", fatb);
+    }else{
+      fatb = left - right;
+      printf("\tFATOR DE BALANCEAMENTO DA RAIZ: %d\n", fatb);
+    }     */
+  /*}
+   prog_exp(raiz);
+    }else{
+        printf("\nArquivo não pode ser aberto!\n");
+        getchar();
+        exit(0);
+    }
+  return raiz;
+  }
+
+    
+int main(){
+    int opcao, valor;
+    No *raiz = NULL;
+    No *raiz2 = NULL;
+    No *busca = NULL;
+    char minhaEntrada[] = ("input1.txt");
+     prog_print(minhaEntrada, raiz);
+*/
+*/

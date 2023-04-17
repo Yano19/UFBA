@@ -1,0 +1,111 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// definição do tipo Pessoa
+
+typedef struct{
+    int dia, mes, ano;
+}Data;
+
+typedef struct{
+    char nome[50];
+    Data data;
+}Pessoa;
+
+typedef struct no{
+    Pessoa p;
+    struct no *proximo;
+} No;
+
+// função para criar uma Pessoa
+Pessoa ler_pessoa(){
+    Pessoa p;
+    printf("\nDigite nome e data de nascimento dd mm aaaa:\n");
+    scanf("%49[^\n]%d%d%d", p.nome, &p.data.dia, &p.data.mes, &p.data.ano);
+    return (p);
+}
+
+// procedimento para imprimir as informações de uma Pessoa
+void imprimir_pessoa(Pessoa p){
+    printf("\nNome: %s\nData: %2d/%2d/%4d\n", p.nome, p.data.dia, p.data.mes, p.data.ano);
+}
+
+
+// função para a operaçao push (empilhar)
+No* empilhar(No *topo){ //recebendo um ponteiro para o topo da nossa pilha e retornando esse PTR para o nó
+    No *novo = malloc(sizeof(No));  //Criando um novo PTR que irá ser o novo topo e ele recebe um tam de memória do tipo NÓ
+
+    if(novo){
+        novo->p = ler_pessoa();
+        novo->proximo = topo;
+        return (novo);
+    }
+    else //verificar se o processo de alocação de memória funcinou 
+        printf("\nErro ao alocar memoria...\n");
+    return (NULL);
+}
+
+// função para desempilhar (operação pop) o nó do topo da pilha
+No* desempilhar(No **topo){ //recebe um ponteiro de ponteiro, pois precisa pegar o endereço de outro ponteiro 
+    if(*topo != NULL){ //verificando se a alocação foi feita corretamente
+        No *remover = *topo;   //Criando PTR auxiliar que irá apontar para o topo
+        *topo = remover->proximo;  //topo agora vai receber o próximo elemento
+        return remover;
+    }
+    else
+        printf("\nPilha vazia!\n"); //caso a pilha esteja vazia "topo == NULL"
+    return NULL;
+}
+
+void imprimir(No *topo){
+    printf("----- PILHA -------");
+    while(topo){
+        imprimir_pessoa(topo->p);
+        topo = topo->proximo;
+    }
+    printf("--- FIM PILHA -------");
+}
+
+int main(){
+    No *remover, *topo = NULL;
+    int opcao;
+    
+    do{ printf("\n0 - sair\n1 -  Empilhar\n2 - Desempilhar\n3 - Imprimir\n");
+        scanf("%d", &opcao);
+        getchar();
+        switch(opcao){
+            case 1:
+            topo = empilhar(topo);
+                break;
+            case 2:
+                remover = desempilhar(&topo);
+                if(remover != NULL){
+                    printf("Elemento removido com sucesso");
+                    imprimir_pessoa(remover->p);
+                    free(remover);
+                }else{
+                    printf("Sem no a remover");
+                }
+                break;
+            case 3:
+                imprimir(topo);
+                break;
+            default:
+                if(opcao != 0)
+                    printf("\nOpcao invalida\n");
+        }
+    } while(opcao != 0);
+    return 0;
+}
+
+/*
+ENTRADAS:
+Nome: Reynan Da Silva Dias Paiva
+Data: 21/08/2003
+
+Nome: Rubens Chagas Paiva
+Data: 01/12/1974
+
+Nome: Sonia Da Silva Dias Paiva
+Data: 19/07/1974
+*/

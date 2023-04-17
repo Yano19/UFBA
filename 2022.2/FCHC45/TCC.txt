@@ -1,0 +1,33 @@
+A EVOLUÇÃO DOS SISTEMAS OPERACIONAIS
+Reynan Da Silva Dias Paiva
+
+RESUMO
+
+Os sistemas operacionais evoluíram muito se comparados as últimas decadas, gerando
+novas formas de utilizar computadores e outros aparelhos eletrônicos. Este trabalho
+apresenta a história dos sistemas operacionais, como que eles chegaram ao ponto que
+esta atualmente, versões que foram consideradas falhas, os tipos existentes, datas,
+caracteristicas de cada sistema e quem foram os seus criadores. É exatamente isso que
+será abordado durante este projeto de pesquisa. Esse trabalho é de extrema importância
+para que as pessoas consigam entender o porquê da existencia de sistemas
+operacionais, como ele mudou ao longo da história o modo que nós utilizamos um
+computardor e o que devemos saber para usufruir deles corretamente. O que mais
+marcou esta evolução dos sistemas foi a criação das técnicas de multi-programação e o
+avanço dos hardware com cada vez mais poder de processamento e velocidade no
+compartilhamento de informações, visto que quanto mais os processadores evoluiam,
+mais rápido o sistema conseguia executar os programas. Para combater essa
+desinformação, fora distribuido em tópicos detalhamente, através de pesquisas
+bibligraáficas as informações necessárias para o mínimo compreendemento sobre o
+tema abordado.
+
+Palavras-Chave: Sistemas Operacionais; Hardwares; Ciência Da Computação; Pesquisa
+
+
+1. Referências Bibliográficas 
+https://costanorte.com.br/colunas/detudoumpouco/quais-s-o-os-tipos-de-sistemas-operacionais-1.350167
+https://olhardigital.com.br/2020/11/20/noticias/anos-de-evolucao-conheca-a-historia-do-windows/
+https://www.tecmundo.com.br/sistema-operacional/2031-a-historia-dos-sistemas-operacionaisilustracao-.htm
+https://www.tiespecialistas.com.br/a-evolucao-do-software/
+https://www.dell.com/pt-br/lp/o-que-e-um-processador
+
+1 Reynan Da Silva Dias Paiva. Cursnado Ciência Da Computação na UFBA. Contato: <reynanwq@gmail.com>.

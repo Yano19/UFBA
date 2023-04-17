@@ -1,0 +1,104 @@
+Nesta questão você deve codificar duas funções em C (ou C++), especificadas como segue:
+
+- void insert(point_t , cell_t ** l). Insere um ponto p em duas listas em ordem crescente de suas coordenadas. As duas listas pertencem a um dos quatro quadrantes do plano cartesiano.  Cada um destes quadrantes possuem duas listas. Por exemplo, após inserir os pontos (2,3), (4,1) e (1,5), a ordem destes nas listas serão: (1,5), (2,3), (4,1) (ordem pela coordenada x) e (4,1), (2,3), (1,5) (ordem pela coordenada y). Neste caso, todos os pontos pertencem ao primeiro quadrante (x e y são maiores ou iguais a zero). Notar que o segundo parâmetro do função é um ponteiro de ponteiros. Desta forma, l[i] representa o início (cabeça) das listas para os quadrante i. 
+
+- void print(cell_t **). Imprime o conteúdo das listas.
+
+A primeira insere um par ordenado (x,y) (do tipo point_t) em duas listas encadeadas e a segunda imprime o conteúdo destas listas. Para tanto, considere as seguintes definições:
+
+typedef struct cell cell_t;
+
+typedef struct { // tipo ponto
+    float x, y;
+} point_t;
+
+// cada celula da lista tem dois ponteiros
+// que indexam pela coordenada x ou pela coordenada y
+
+struct cell {
+  point_t point; // par ordenado do ponto (x,y)
+  cell_t * xnext, * ynext; // ponteiros para construir as listas
+};
+
+Os dois ponteiros xnext e ynext servem para encadear a mesma célula em duas listas ao mesmo tempo de forma que após inserir n células, seja possível percorrer uma lista encadeada através da coordenada x (ponteiro xnext) e da coordenada y (ponteiro ynext).
+
+A função que cria uma nova célula e a que cria a lista são dadas por:
+
+cell_t *newCell(void) { // cria nova celula
+
+  cell_t *p = malloc( sizeof (cell_t));
+
+  if (p) { // novas celulas teminicialmente  poteiro nulo
+    p -> xnext = NULL;
+    p -> ynext = NULL;
+  } 
+  return p;
+
+}
+
+// cria 4 cabeças de listas, uma para cada quadrante.
+
+cell_t ** newList(void) {
+
+  cell_t **q = malloc(4*sizeof(cell_t)); // pontos são distribuídos por quadrante
+
+  if (q) {
+  for (int i = 0; i < 4; i++)
+    q[i] = newCell(); // cabeça da lista do quadrante i
+  }
+  return q;
+}
+
+
+O programa principal (código abaixo) deve ler um valor inteiro n e em seguida ler n pontos (0 < n <= 1000), um ponto por linha. Após inserir os n pontos, o programa deve exibir o resultado da função print, como exemplificado abaixo. 
+
+int main() {
+
+  cell_t **list;
+  int n;
+  point_t p;
+
+  list = newList();
+
+  scanf("%d",&n);
+
+  for(int i = 0; i < n; i++) {
+    scanf("%f %f",&p.x,&p.y);
+    insert(p,list);    
+  }
+  print(list);
+}
+
+Exemplo. Usando o programa principal acima (você deve usá-lo) e considerando a seguinte entrada:
+
+10
+10 20
+-3 7
+30 -10
+50 15
+40 45
+-4 -12
+5 9
+26 12
+13 22
+-9 7
+
+Sua implementação deve exibir na saída:
+
+Quadrante 0:
+ ( 5.00, 9.00):( 5.00, 9.00)
+ (10.00,20.00):(26.00,12.00)
+ (13.00,22.00):(50.00,15.00)
+ (26.00,12.00):(10.00,20.00)
+ (40.00,45.00):(13.00,22.00)
+ (50.00,15.00):(40.00,45.00)
+Quadrante 1:
+ (-9.00, 7.00):(-9.00, 7.00)
+ (-3.00, 7.00):(-3.00, 7.00)
+Quadrante 2:
+ (-4.00,-12.00):(-4.00,-12.00)
+Quadrante 3:
+ (30.00,-10.00):(30.00,-10.00)
+
+Observação: A correção da sua resposta será baseada na comparação entre as saídas de sua implementação e a saída de minha implementação para dados gerados aleatoriamente. Portanto, é importante que o programa principal acima seja usado para ler os dados.
+

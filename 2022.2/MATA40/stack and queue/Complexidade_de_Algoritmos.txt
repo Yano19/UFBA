@@ -1,0 +1,39 @@
+Complexidade de Algoritmos:
+
+A medição da complexidade de um algoritmo é tradicionalmente feita em ciências da computação utilizando-se análise assintótica a qual utiliza o que é chamado de notação Big O (o O(n).
+
+Um algoritmo com complexidade O(n) é nada mais que um algoritmo de tempo linear, o que significa que o tempo que ele leva para executar é um reflexo direto do tamanho da entrada de dados que ele utiliza e que esse tempo cresce de forma constante e...linear!
+
+Analisar a complexidade do algoritmo com vista no tamanho do problema. Diferentes computadores, muitas vezes com hardwares idênticos, podem levar tempos diferentes para processar um mesmo algoritmo. Por tanto, avaliar o desempenho de um algoritmo com base apenas no tempo de execução deste, é ineficiente.
+
+O melhor caso corresponde ao menor tempo de execução sobre todas as possíveis entradas de tamanho n,  f(n) = Ω(1) 
+
+O caso médio corresponde à média dos tempos de execução de todas as entradas de tamanho n, f(n) = θ(n/2) 
+
+O pior caso corresponde ao maior tempo de execução sobre todas as entradas de tamanho n,  f(n) = O(n)
+
+Note que utilizamos 3 notações para representar os possíveis casos: Ômega (Ω), Theta(θ) e Ômicron (Big O). 
+
+A maneira mais comum de analisar um algoritmo é pelo pior caso, Big O. Você naturalmente não avalia o melhor caso, porque essas condições não são atingidas com frequência. 
+Menor caso é o mais comum de acontecer.
+
+A complexidade de tempo não representa tempo diretamente, mas o número de vezes que determinada operação considerada relevante é executada.
+
+Repetindo, a notação Big O é a mais utilizada na análise de complexidade de algoritmos em geral, normalmente para pior caso, entretanto, há casos como o algoritmo QuickSort, por exemplo, que a notação O também é utilizada para o caso médio. As outras são raramente utilizadas: a notação Ω é usada algumas vezes para definição de limites inferiores. Porém, é importante lembrar que as definições de notações são independentes da análise de algoritmos, podendo ser utilizados para outros fins.
+
+O(1) = Complexidade constante o tempo de execução do algoritmo independe do tamanho da entrada  é bem rápido.
+O(log(n)) = Complexidade logarítmica o tempo de execução pode ser considerado menor do que uma constante grande. É super rápido
+O(n) = Complexidade linear o algoritmo realiza um número fixo de operações sobre cada elemento da entrada
+O(n log(n)) = Típico de algoritmos que dividem um problema em subproblemas, resolve cada subproblema de forma independente, e depois combina os resultados
+O(n2) = Complexidade quadrática. Típico de algoritmos que operam sobre pares dos elementos de entrada
+O(n3) = Complexidade cúbica que é útil para resolver problemas pequenos como multiplicação de matrizes
+O(2 elevado a n) = Complexidade exponencial. Típicos de algoritmos que fazem busca exaustiva (força bruta) para resolver um problema
+O(n!) = Complexidade fatorial. É normalmente encontrado ao analisar a complexidade de algoritmos de força bruta, que tentam todas as possibilidades para problemas de otimização combinatória.
+
+Comparação Assintótica:
+
+A matemática que se interessa apenas pelos valores enormes de n é chamada assintótica.
+
+Ordem O: Para definir o conceito de ordem Ο, convém restringir a atenção a funções assintoticamente não-negativas, ou seja, funções f tais que f(n) ≥ 0 para todo n suficientemente grande.
+
+Limite de complexidade de Algoritmos: Descobrir o comportamento de uma função a medida que ela se aproxima do valor desejado.
