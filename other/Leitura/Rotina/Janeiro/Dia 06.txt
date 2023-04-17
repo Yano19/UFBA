@@ -1,0 +1,12 @@
+4 horas para fazer isso!
+
+1° Commit: Udemy
+2° Commit: Udemy
+3° Commit: NodeJS
+4° Commit: Curso grátis de Javascript | Eventos | Keyup
+5° Commit: food peak - resolver css problema
+6° Commit: Férias -> Leitura -> Socialismo e Comunismo -> "add description"
+7° Commit: Curso grátis de Javascript | Eventos | Keypress
+8° Commit: Pasta 1 - Treino: praticar server (nodejs)                        
+9° Commit: Pasta 2 - Treino: praticar server (nodejs)   
+10°Commit: Mini projetos javascript (Iniciantes) - 02 Semáforo 

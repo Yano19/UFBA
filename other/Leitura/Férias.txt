@@ -1,0 +1,98 @@
+Competição de Programação: in C 
+
+A. Watermelon
+A. Way Too Long Words
+A. Team
+A. Calculating Function
+A. Division?
+A. Cards for Friends
+A. I Wanna Be the Guy
+A. Epic Game
+A. Party
+B. Last Year's Substring
+B. Sport Mafia
+C. MAX-MEX Cut
+D. Two Divisors
+D. Three Integers
+A. Bmail Computer Network
+B. Christmas Spruce
+C. Useful Decomposition
+D. Weights Assignment For Tree Edges
+A. Hashing Trees
+A1. Add on a Tree
+C. Tree Infection
+D. Distance in Tree
+C. Kamil and Making a Stream
+
+
+Programação Orientada a Objetos: JAVA
+
+Course OOP Theory # 01a - What is Object Oriented Programming
+Curso POO Java # 01b - Instalando o JDK e NetBeans
+Curso POO Teoria # 02a - O que é um Objeto?
+Curso POO Java # 02b - Criando Classes e Objetos em Java
+Curso POO Teoria # 03a - O que é Visibilidade em um Objeto?
+Curso POO Java # 03b - Configurando Visibilidade de Atributos e Métodos
+Curso POO Teoria # 04a - Métodos Especiais
+Curso POO Java # 04b - Métodos Getter, Setter e Construtor
+Curso POO Teoria # 05a - Exemplo Prático com Objetos
+Curso POO Java # 05b - Exemplo Prático em Java
+Curso POO Teoria # 06a - Pilares da POO: Encapsulamento
+Curso POO Java # 06b - Encapsulamento
+Curso POO Teoria # 07a - Relacionamento entre Classes
+Curso POO Java # 07b - Objetos Compostos em Java
+Curso POO teoria # 08a - Relacionamento de Agregação
+Curso POO teoria #08a - Relacionamento de Agregação
+Curso POO Java #08b - Agregação entre Objetos com Java
+
+Udemy:
+44. Exercício (unindo tudo aprendido até aqui e mais)
+50. Atribuição via desestruturação (Arrays)
+57. Exercícios com NodeList (Browser)
+59. Break e Continue
+63. Tratando e lançando erros (try, catch, throw)
+64. Tratando e lançando erros (try, catch, finally)
+65. setInterval e setTimeout
+66. Exercício - Criando um timer com setInterval
+67. Criando uma lista de tarefas
+68. As várias maneiras de declarar funções em JavaScript
+69. Parâmetros da função
+70. Retorno da função
+71. Escopo léxico
+72. Closures
+73. Funções de callback
+74. Funções imediatas (IIFE)
+75 Funções fábrica (Factory Functions)
+77. Funções construtoras (constructor functions
+78. Calculadora com função construtora
+79. Funções recursivas
+80. Funções geradoras
+
+Árvores: Heap
+
+Algebra Linear:
+
+Complemento de Calculo:
+
+REACT - Typescript:
+https://www.youtube.com/playlist?list=PL29TaWXah3iZktD5o1IHbc7JDqG_80iOm
+
+- Curso de react: Aula 01 - Começando com ReactJS
+- Curso de react: Aula 02 - Removendo arquivos desnecessários
+- Curso de react: Aula 02.01 [bônus] - Atualização do react-router-dom
+- Curso de react: Aula 03 - Estrutura de pastas
+- Curso de react: Aula 04 - Componentes e páginas
+- Curso de react: Aula 05 - Navegando entre rotas
+- Curso de react: Aula 06 - Usando o useState da forma certa
+- Curso de react: Aula 07 - Usando o useEffect da forma certa
+- Curso de react: Aula 08 - Usando o useMemo
+- Curso de react: Aula 09 - Usando o useCallback
+- Curso de react: Aula 10 - Usando o useRef com elementos HTML
+
+TEORIA - ASSUNTOS DE PROGRAMAÇÃO:
+    
+- LINUX: linux Mint
+- Personalidades da Computação:
+    Richard Stallman
+    Edsger Dijkstra
+    Ward Cunningham

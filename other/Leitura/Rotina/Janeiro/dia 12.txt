@@ -1,0 +1,10 @@
+1° Commit: Udemy 
+2° Commit: dia 12.txt
+3° Commit: Postman - terminal
+4° Commit:Nodejs
+5° Commit:Nodejs
+6° Commit:Nodejs
+7° Commit: herança video 
+8° Commit: herança video
+9° Commit: landing page
+10° Commit: dia 13.txt

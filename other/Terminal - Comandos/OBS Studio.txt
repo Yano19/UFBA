@@ -1,0 +1,4 @@
+PARA INSTALAR O GITHUB DEVE EXECUTAR OS SEGUINTES COMANDOS:
+
+- sudo add-apt-repository ppa:obsproject/obs-studio
+- sudo apt install obs-studio

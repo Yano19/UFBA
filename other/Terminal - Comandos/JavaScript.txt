@@ -1,0 +1,24 @@
+DIGITAR NO TERMINAL APENAS AS LINHAS QUE TIVEREM UM "-"
+O QUE ESTIVER ENTRE PARENTESES () SÃO APENAS COMENTÁRIOS
+
+Node.js:
+-  sudo apt install curl
+curl: utilitário do linux que faz requisições de rede)
+- curl -fsSL https://deb.nodesource.com/setup_(NUMERO DA VERSÃO).x | sudo -E bash -
+- sudo apt-get -y nodejs
+(-y: para confirmar que você realmente deseja instalar)
+- node --version
+- npm --version
+
+React-TypeScriptc - Projeto em Vite:
+- npm create vite@latest
+(project name: (digitar o nome do seu projeto))
+(Select a framework: (React)
+(Select a variant: (TypeScript))
+- code .
+(no terminal do vscode)
+- npm install
+(instalar dependencias)
+- npm i typescript -D
+- npx tsc --init
+(criar arquivo tsc config .json)

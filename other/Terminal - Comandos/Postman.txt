@@ -1,0 +1,21 @@
+Ir no site oficial do postman e fazer o download da última versão.
+
+Extrair o arquivo para o diretório /opt
+
+- sudo mv Postman /opt/
+- cd /opt/
+- ls 
+- sudo gedit /usr/share/application/postman.desketop
+- [Desktop Entry]
+  Name=Postman
+  GenericName=API Client
+  X-GNOME-FullName=Postman API Client 
+  Comment=Make and view REST API calls and responses
+  Keywords=api;
+  Exec=/home/rodrigo/Postman/Postman
+  Termina=false
+  Type=Application
+  Icon=/home/rodrigo/Postman/app/resources/app/assets/icon.png
+  Categories=Development;Utilities;
+
+Agora, basta abrir o programa.

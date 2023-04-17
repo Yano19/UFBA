@@ -1,0 +1,157 @@
+ALGEBRA LINEAR:
+(Prova: 08/11 (36 dias))
+
+13/10: - Grings - Álgebra Linear - Combinação Linear de Vetores - Aula 10 (OK)
+13/10: - Grings - Álgebra Linear - Combinação Linear - Ex1 - Aula 11      (OK)
+13/10: - Grings - Álgebra Linear - Combinação Linear - Ex2 - Aula 12      (OK)
+14/10: - Grings - Álgebra Linear - Combinação Linear - Ex3 - Aula 13      (OK)
+14/10: - Grings - Álgebra Linear - Dependência Linear - Ex 1 - Aula 16    (OK)
+15/10: - Grings - Álgebra Linear - Dependência Linear - Ex 2 - Aula 17    (OK)
+15/10: - Grings - Álgebra Linear - Dependência Linear - Ex 3 - Aula 18    (OK)
+15/10: - Grings - Álgebra Linear - Dependência Linear - Ex 4 - Aula 19    (OK)
+15/10: - Grings - Álgebra Linear - Espaço Vetorial - Ex1 - Aula 20        (OK)  
+16/10: - Grings - Álgebra Linear - Espaço Vetorial - Ex2 - Aula 21        (OK)
+16/10: - GRINGS - Álgebra Linear - Subespaço Vetorial - Ex1 - Aula 22     (OK)
+17/10: - Grings - Álgebra Linear - Subespaço Vetorial - Ex2 - Aula 23     (OK)
+18/10: - Grings - Álgebra Linear - Subespaço Vetorial - Ex3 - Aula 24     (OK)
+18/10: - Grings - Álgebra Linear - Subespaço Vetorial - Ex5 - Aula 26     (OK)
+19/10: - Grings - Álgebra Linear - Subespaço Gerado - Ex.1 - Aula 27      (OK)
+19/10: - GRINGS - Álgebra linear - Subespaço Gerado - Ex.2 - Aula 28      (OK)
+19/10: - Grings - Álgebra linear - Subespaço Gerado - Ex.3 - Aula 29      (OK) 
+19/10: - GRINGS - Álgebra Linear - Base de um Espaço Vetorial - Aula 30   (OK)
+19/10: - GRINGS - Como calcular uma base geradora - ( Aula 31 )           (OK)
+21/10: - GRINGS - Extraindo a base geradora de um subespaço. Exercício 1 - ( Aula 32 ) (OK)
+22/10: - GRINGS - Extraindo a base geradora de um subespaço. Exercício 2 - ( Aula 33 ) (OK)
+23/10: - GRINGS - Como extrair uma base geradora de um conjunto de vetores - ( Aula 36 ) (OK)
+23/10: - GRINGS - Subespaço gerado a partir de um conjunto de vetores - ( Aula 37 ) (OK)
+23/10: - GRINGS - Mudança de base geradora - ( Aula 38 )  (OK)
+23/10: - GRINGS - Mudança de base sem uso de matriz inversa - ( Aula 39 )  (OK)
+31/10: - GRINGS - Mudança de base . Vetor com 3 componentes - ( Aula 40 )  (OK)
+01/10: - ALGEBRA WHATSAPP
+04/10: - REVISÃO DO ASSUNTO
+06/10: - RESPONDER QUESTÕES
+
+LÓGICA PARA COMPUTAÇÃO:
+(Prova: (19 dias))
+(Ler pelo menos 1 vez por dia o Script)
+(SCRIPT)
+13/10: - Exercício 3.43; Definição 3.44; Exemplo 3.45    (OK)
+14/10: - Exercício 3.46; Definição 3.47; Teorema 3.48 (OK)
+14/10: - Sistemas Dedutivos 3.3; Axiomatizaçao — um calculo no estilo de Hilbert 3.3.1; Definição 3.49  (OK)
+16/10: - Teorema 3.50 (Corretude do Cálculo); Observação 3.51; Teorema 3.52 (Finitude do Cálculo)       (OK)
+16/10: - Lema 3.53; Definição 3.54; Lema 3.55 (OK)
+17/10: - Lema 3.56 (Teorema Da Dedução); Lema 3.57; Lema 3.58 (Teorema de Lindenbaum) (OK)
+18/10: - Lema 3.59 (Lema de Zorn); Lema 3.60; Lema 3.61 (Propriedades de conjuntos maximal consistentes) (OK)
+19/10: - Lema 3.62 Todo conjunto consistente e satisfatıvel; Teorema 3.63 (Teorema da Completude); Corolario 3.64 (OK)
+20/10: - 3.3.2 Um calculo de sequentes; Exemplo 3.67; Definição 3.68 (OK)
+21/10: - Observação 3.69; Definição 3.70; Teorema 3.71 (OK)
+22/10: -  Definição 3.72; Teorema 3.73; Exemplo 3.74
+23/10: - Exemplo 3.75; Teorema 3.76; Colário 3.77; 3.3.3 O Cálculo de Resolução
+14/10: - Tecnicas (ou metodos) de demonstracao; Teorema 1.1; Exemplo 1.2     (OK)
+14/10: - introdução; A lógica proporcional; Sintaxe da Logica Proposicional  (OK)
+15/10: - Definicao 3.1; Definicao 3.2; Exercıcio 3.3; Teorema 3.4 (Princıpio da prova por inducao nas formulas (OK)
+16/10: - Exemplo 3.5; Definicao 3.6; 3.2 Semantica da Logica Proposicional   (OK)
+17/10: - Definicao 3.7; Exercicio 3.8; Exercicio 3.9; Exercicio 3.10; Lema 3.11; Definicao 3.12; Exemplo 3.13; Lema 3.14(lema da coincidencia)  (OK)
+24/10: - Definicao 3.15; Exercicio 3.16; Exemplo 3.17; Exercicio 3.18; 3.2.1 Consequencia lógica; Definicao 3.19; Exemplo 3.20  (OK)
+25/10: - Teorema 3.21 (Teorema da Deducao); Teorema 3.22 (Propriedades da relacao da consequencia logica); Lema 3.23; 3.2.2 Equivalencia logica (OK)
+26/10: - Definicao 3.24; Exemplo 3.25; Exemplo 3.26; Exercıcio 3.27; Definicao 3.28; Lema 3.29; (OK)
+27/10: - Definicao 3.30; Teorema 3.31; Exemplo 3.32; (OK)
+28/10: - Lema 3.33; 3.2.3 Formas normais; Definicao 3.34; Exemplo 3.35; Teorema 3.36; Exercıcio 3.37; Exemplo 3.38; Exercıcio 3.39 (OK)
+29/10: - Definicao 3.40; Lema 3.41; Lema 3.42 (OK)
+30/10: - Questões lista
+31/10: - 3 - Questões
+31/10: - Questão 04, 05
+
+01/11: - Revisão questões de prova por equivalencia: (LISTA 01: questão 04) e (PROVA 2021.2: questão 02) (OK)
+02/10: - Prova por indução: revisão e resolver questões (OK)
+03/10: - Calculo de Hilbert: revisão e resolver questões 
+04/10: - Calculo de Sequentes: revisão e resolver questões
+05/10: - revisão/questões de: FND e FND ; arvore sintática ; equivalencia lógica
+06/10: - Revisão dos assuntos principais (principalmente as questões de demonstração)
+07/10: -
+08/10: - PROVA
+
+FCHC45:
+(Pesquisar sobre o tema)
+(Todo domingo: Começar leitura do livro)
+(Livro: LGPD Ninja: Entendendo e implementando a Lei Geral de Proteção de Dados na Empresa)
+13/10: - Introdução   (OK)
+14/10: - Capítulo 1: A Lei Geral de Proteção De Dados, e este livro, 1.2 A tão temida LGPD, 1.3 Perfil dos leitores,1.4 O Framework LGPD Ninja  (OK)
+14/10: - 1.5 Organização do Livro, 2.1 O que é a GDPR (OK)
+15/10: - 2.2 Relação da GPDR com o Brasil, 2.3 Cumprimento com a GDPR, 3.1 Sequência Histórica, (OK)
+15/10: - Capítulo 4: Outras Leis - Analisando a relação da LGPD com outras leis anteriore (OK)
+15/10: - 4.1 Relativas ao Setor Financeiro,4.2 Relativas à Saúde,4.3 Relativas diretamente ao Indivíduo,4.4 Relativas ao Estado,4.5 Relativas as Comunicações(OK)
+15/10: - 4.7 Relativas a Internet ou a dispositivos Eletrônicos   (OK)
+15/10: - Capítulo 5: Conceitos - Conceitos básicos para uma melhor compreensão da lei (OK)
+15/10: - 5.1 Pessoa Natural,5.2 Pessoa Jurídica, 5.3 Compliance, 5.4 Dado Pessoal, 5.5 Dado Pessoal Sensível, 5.6 Dado Anonimizado (OK)
+16/10: - 5.7 Encriptação, 5.8 Dado Encriptado, 5.9 Minimização, 5.10 Banco de Dados, 5.11 Titular, 5.13 Operador (OK)
+17/10: - 6.1 Capítulo | - Disposições Preliminares, 6.2 II - Do Tratamento de Dados Pessoais,6.3 III - Dos Direitos do Titular
+18/10: - 6.4 IV - Do Tratamento de Dados pelo Poder Público, 6.5 V - Da Transferência Internacional de Dados, 6.7 VII - De Segurança e Boas Práticas
+19/10: - 6.8 VIII - Da Fiscalização, 6.9 IX - Da Autoridade Nacional de Proteção de Dados, 6.10 X - Disposições Finais e Transitórias
+20/10: - CRESWELL, J. Projeto de pesquisa: método qualitativo, quantitativo e misto: Capitulo 4 - importancia das introduções PAG 44-63
+21/10: - Capitulo 10: Processos qualitativos PAG (184-201) 
+22/10: -  INTRODUÇÃO
+23/10: -  REFERENCIAL TEORICO
+24/10: -  METODOLOGIA
+14/11: -  PAG 7
+15/11: -  PAG 8
+16/11: -  PAG 9
+17/11: -  PAG 12
+18/11: -  PAG 14
+19/11: - SLIDE
+20/11: - PAG 22
+
+ESTRUTURA DE DADOS:
+(Codar em C pelo menos uma vez por dia - deixar separado)
+
+13/10: - Curso de Programação C | Como percorrer uma matriz dinâmica com aritmética de ponteiros? | Aula 204 (OK)
+14/10: - Curso de Programação C | Estruturas de dados dinâmicas - Pilhas, Filas, Listas, Árvores | aula 223  (OK)
+15/10: - Curso de Programação C | Operação push. Como empilhar um dado na estrutura de dados pilha | aula 224 (OK)
+15/10: - Curso de Programação C | Operação pop. Como desempilhar um nó na estrutura de dados pilha | aula 225 (OK)
+15/10: - Curso de Programação C | Imprimindo e testando nossa estrutura de dados dinâmica PILHA | aula 226  (OK)
+18/10: - Curso de Programação C | Segunda versão para a estrutura de dados dinâmica do tipo PI (OK)LHA | aula 227
+19/10: - Curso de Programação C | TAD - Tipo Abstrato de Dado | aula 228
+20/10: - Curso de Programação C | Como simular a recursão com uma estrutura de dados PILHA? | aula 229
+21/10: - Curso de Programação C | Como criar arquivos de cabeçalho .h na linguagem C? | aula 230
+22/10: - Curso de Programação C | Verificar se uma expressão matemática está mal formada com PILHA | aula 231
+23/10: - Curso de Programação C | Como inverter a ordem das letras de uma string? | aula 232
+24/10: - Curso de Programação C | Estrutura de dados dinâmica do tipo FILA | aula 234
+25/10: - Curso de Programação C | Desafio da aula 231 - descobrir se uma expressão está mal formada |aula 235
+26/10: - Curso de Programação C | Como inserir um elemento em uma estrutura de dados do tipo FILA? | aula 236
+27/10: - Curso de Programação C | Como remover um elemento em uma estrutura de dados do tipo FILA? | aula 237
+28/10: - Curso de Programação C | Imprimindo e testando nossa estrutura de dados FILA | aula 238
+29/10: - Curso de Programação C | Estrutura de dados FILA - segunda versão com a estrutura Fila | aula 239
+30/10: - Curso de Programação C | O que são FILAS DE PRIORIDADE? | aula 240
+31/10: - Curso de Programação C | Como implementar a estrutura de dados fila de prioridade em C? | aula 241
+01/11: - Curso de Programação C | Lista encadeada, lista duplamente encadeada e lista circular | aula 242
+02/11: - Curso de Programação C | Como inserir no início de uma Lista Simplesmente Encadeada? | aula 243
+03/11: - Curso de Programação C | Como inserir no fim de uma Lista Simplesmente Encadeada? | aula 244
+04/11: - Curso de Programação C | Como inserir no meio de uma Lista Simplesmente Encadeada? | aula 245
+05/11: - Curso de Programação C | Imprimindo e testando nossa lista simplesmente encadeada | aula 246
+06/11: - Curso de Programação C | Como remover um nó da estrutura lista simplesmente encadeada? | aula 250
+07/11: - Curso de Programação C | Como buscar um elemento em uma lista simplesmente encadeada? | aula 252
+08/11: - Curso de Programação C | Como criar uma lista C a partir de duas listas A e B? | aula 254
+09/11: - Curso de Programação C | Como construir uma lista duplamente encadeada? | aula 257
+10/11: - Curso de Programação C | Estrutura de dados dinâmica Árvore Binária de Busca | aula 264
+11/11: - Curso de Programação C | Como inserir em uma ÁRVORE BINÁRIA? Versão 1 | aula 265
+12/11: - Curso de Programação C | Como imprimir uma árvore binária de busca? 2 versões | aula 266
+13/11: - Curso de Programação C | Como inserir em uma ÁRVORE BINÁRIA? Versão 3 mais EFICIENTE | aula 268
+14/11: - Curso de Programação C | Como buscar um elemento em uma ÁRVORE BINÁRIA? Versão recursiva | aula 269
+15/11: - Curso de Programação C | Como calcular a ALTURA de uma árvore binária de busca? | aula 271
+16/11: - Curso de Programação C | Estrutura de dados Árvore 2-3-4 (2-3-4 Tree) | aula 318
+21/11: - alterar variaveis AVL and undertand VP code, after that, make changes in the code too
+
+
+WEB:
+17/10: - como consumir uma api em 20 minutos em javaScript puro  (OK)
+18/10: - Como consumir de uma API usando a Fetch API! - Level Up #05 (OK)
+19/10: - Como consumir uma API com javascript | CEP da viaCep #01 (OK)
+
+UDEMY:
+??/11: - 44. Exercício (unindo tudo aprendido até aqui e mais)
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+---------------------- SÁBADO ----------------------------  
+
+1° Commit: 105. Métodos de instância e estáticos
+2° Commit: Promisses
+3° Commit:  Async / Await
+4° Commit: XMLHttpRequest (GET) + Promises
+5° Commit: Fetch API (GET)
+6° Commit: Fetch API e Axios (JSON)
+7° Commit: Crie uma API RESTful com Node.js e MongoDB | CRUD com Node, Express e Mongoose
+8° Commit: Crie uma API RESTful com Node.js e MongoDB | CRUD com Node, Express e Mongoose
+9° Commit: Crie uma API RESTful com Node.js e MongoDB | CRUD com Node, Express e Mongoose
+10° Commit: Crie uma API RESTful com Node.js e MongoDB | CRUD com Node, Express e Mongoose
+
+
+adicionar coisas fixas, diminuir o foco em landing pages até o dia 20/01

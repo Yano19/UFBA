@@ -1,0 +1,10 @@
+1° Commit: mysql
+2° Commit: mysql
+3° Commit: mysql
+4° Commit: mysql
+5° Commit: mysql
+6° Commit: udemy
+7° Commit: udemy
+8° Commit: udemy
+9° Commit: CRUD
+10° Commit: CRUD

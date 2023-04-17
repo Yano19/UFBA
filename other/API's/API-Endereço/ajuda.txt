@@ -1,0 +1,10 @@
+BootsTrap: https://getbootstrap.com
+
+unDraw: website que contém algumas imagens que podem ser utilizadas
+
+utilizamos uma constante para pegar o ID pois é mais rápido para o computador encontrar e executar
+
+.focus(); // ao terminar de digitaar o cep, irá redirecionar para o form escolhido, como uma prioridade
+
+Este foi o vídeo utilizado para criar o projeto
+https://youtu.be/1MDu38wURSQ

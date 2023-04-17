@@ -1,0 +1,10 @@
+1° Commit: NodeJS - Treino
+2° Commit: NodeJS - Treino
+3° Commit: landing page
+4° Commit: Udemy
+5° Commit: Dev Aprender
+6° Commit: Node Studio Treinamento 
+7° Commit: getElementByTagName
+8° Commit: appendChild
+9° Commit: removeChild
+10° Commit: parentNode

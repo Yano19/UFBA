@@ -1,0 +1,80 @@
+DIGITAR NO TERMINAL APENAS AS LINHAS QUE TIVEREM UM "-"
+O QUE ESTIVER ENTRE PARENTESES () SÃO APENAS COMENTÁRIOS
+
+PC -> Github:
+- git init
+- git remote add origin (link do seu repositório)
+- git status
+- git add . 
+- git commit -m "nome-do-commit"
+- git push -u origin "sua-branch"
+
+Clonar Repositório:
+- git clone "link"
+
+Atualizar Repositório:
+- git status
+ (Para saber o que estou atualizando)
+- git add .
+- git commit -m "mudança-realizada"
+- git push -u origin "sua-branch"
+
+Alterações que foram feitas manualmente e deseja upar na maquina (README, por exemplo):
+- git pull
+
+Criar uma nova Branch para o meu repositório:
+- git branch -vv
+    (ver quais ramificações estão disponiveis)
+- git cheeckout -b dev
+    (criar uma nova branch de nome dev e mudar para ele imediatamente)
+- git push -u origin dev
+
+
+Merge:
+- git cheeckout -b "Nome da branch"
+    (Criar uma nova Branch)
+- git cheeckout master
+    (Entrar novamente na Branch master)
+- git merge dev
+    (passo as alterações feitas na branch dev para master)
+- git add .
+- git commit -m "Nomde do Commit"
+- git push -f --set-upstream origin master
+(   utilizada para dá um push para master
+    muito útil quando aparece o seguinte erro:
+    error: failed to push some refs to 'https://github.com/Reynanwq/Lab-UFBA'
+    hint: Updates were rejected because the tip of your current branch is behind
+    hint: its remote counterpart. Integrate the remote changes (e.g.
+    hint: 'git pull ...') before pushing again.
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+)
+
+
+ANOTAÇÕES - AULA: Curso de Git e Github COMPLETO 2021 [Iniciantes] + Desafios + Muita Prática
+link: https://www.youtube.com/watch?v=kB5e-gTAl_s&t=117s
+
+PARA DÁ PUSH EM UM ARQUIVO ESPECIFICO
+(caso o arquivo esta dentro de alguma pasta, então também deve citar a pasta)
+- git add "nome do arquivo"
+
+PARA VERIFICAR QUAIS FORAM OS MEUS HISTÓRICOS DE ALTERAÇÃO
+- git reflog
+- <entre> (para ir vendo as alterações mais antigas)
+
+PARA NAVEGAR ENTRE VERSÕES ANTERIORES DO SEU CÓDIGO
+- git reflog (para descobrir o id da versão que você quer voltar)
+- git reset --hard "id da versão anterior"
+- git reset --hard "id da versão atual"  (caso queira voltar para a versão original)
+
+
+VER OS DOIS ÚLTIMOS COMMITS
+
+- git log 
+
+"autor do commit"
+"data de alteração do commit"
+"o commit"
+
+quando mais vezes apertar a tecla <Enter> mais o histórico vai aparecendo
+
+(GIT COMMIT --AMEND) O QUE FAZ?

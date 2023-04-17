@@ -1,0 +1,7 @@
+- ao corriti o texto, apenas citar que corrigiu o texto e não o que foi corrigido
+- Começar o commit sempre com letra maiuscula
+- Não terminar a linha com um ponto "."
+- Ao commitar, ele deve acompanhar a seguinte frase
+"Se commitar, esse script irá... [meu commit]"
+"Quando commitar, esse script faz... [meu commit]"
+- Fazer commits em inglês

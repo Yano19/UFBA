@@ -1,0 +1,10 @@
+1° Commit: database 
+2° Commit: database
+3° Commit: database
+4° Commit: database
+5° Commit: mysql workbench
+6° Commit: mysql workbench
+7° Commit: linguagem sql - teoria
+8° Commit: linguagem sql - teoria
+9° Commit: linguagem sql - pratica
+10° Commit: linguagem sql - pratica

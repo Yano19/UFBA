@@ -1,0 +1,8 @@
+Verificar se seus repositórios estão atualizados:
+- sudo apt update
+
+PARA INSTALAR O MYSQL:
+- sudo apt install mysql-server
+
+PARA SABER QUAL VERSÃO ESTÁ USANDO:
+- mysql --version

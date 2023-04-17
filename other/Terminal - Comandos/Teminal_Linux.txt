@@ -1,0 +1,70 @@
+Para atualizar programas que serão instalados
+- sudo apt-get update
+
+Mostrar arquivos de diretórios:
+- ls
+
+Quantidade de espaço livre disponível:
+- free
+
+Maior controle do sudo, ao utilizar, não precisara digitar a senha pelos próximos 5 minutos
+- sudo -k
+- sudo "comando"
+  ao utilizar o sudo -k novamente, ele volta a pedir a senha, muit útil para locais publicos
+
+Para descobrir se o SUDO está instalado no meu sistema.
+- which sudo
+
+Descobrir o que o usuario pode executar
+- sudo -l
+
+Executar comando sem utilizar a senha
+- sudo -v
+
+Exibir nome do user que está logado na minha maquina
+- whoami
+
+Voltar para o meu diretório principal
+- ls -
+
+remover um diretório usamos:
+
+- rmkdir
+  que pode ser lido como meio que um "remove director"
+
+Para descobrir em qual diretório eu estou
+(print working directory)
+- pwd
+
+
+Criar um arquivo.txt e confirmar a sua criação
+- touch "nome do arquivo".txt
+- ls
+
+Exibir o que está escrito em um arquivo.txt
+- cat "nome do arquivo".txt
+
+DIVERSSÃO!!!
+(comando do tremzinho que aprece quandoo usuario digita sl ao invés de ls)
+- sudo apt install sl 
+
+
+Ver lista do que é para ser atualizado no meu PC
+- sudo list --upgradable
+
+Atualizar o sistema instalando e atualizando pacotes
+- sudo apt upgrade
+
+Mostar as informações detalhadas de algum pacote
+- apt show "nome do pacote"
+
+Mostrar as dependências de algum programa
+- apt-cache depends "nome do programa"
+
+Voltar para o código que foi digitado anteriormente
+- "seta para cima"
+
+DIVERSÃO!!!
+Inverter qualquer palavra
+(rev provavelmente vem)
+- rev

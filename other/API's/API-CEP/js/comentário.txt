@@ -1,0 +1,5 @@
+use strict: previne algumas ações de serem tomadas e envia mais exceções. como se fosse uma versão mais segura e reduzida do JavaScript.
+
+ATRIBUINDO A URL A UMA VARIAVEL
+const url = `http://viacep.com.br/ws/${cep}/json/`;
+fetch(url).then(response => response.json()).then(console.log);

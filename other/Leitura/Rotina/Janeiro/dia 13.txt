@@ -1,0 +1,27 @@
+1° Commit: Udemy
+2° Commit: Udemy
+3° Commit: EJS
+4° Commit: herança - teoria
+5° Commit: herança - prática
+6° Commit: Nodejs - aula
+7° Commit: Nodejs - MongoDB
+8° Commit: Nodejs - postman
+9° Commit: Nodejs - treinanmento resolver problema
+10° Commit: landing page
+
+----------- Seção MongoDB -----------
+
+Crie uma API RESTful com Node.js e MongoDB | CRUD com Node, Express e Mongoose
+https://www.youtube.com/watch?v=K5QaTfE5ylk
+
+Autenticação com Node.js e MongoDB com JWT - Login e Registro com Node.js
+https://www.youtube.com/watch?v=qEBoZ8lJR3k
+
+Começando com MongoDB
+https://www.youtube.com/watch?v=jC7imm4ZLRY
+
+
+----------- Seção Postman -----------
+
+Curso testando APIs do zero com Postman
+https://www.youtube.com/playlist?list=PLEqTHftpM91OzKYUkpaEuByhSpJYc90Hs
