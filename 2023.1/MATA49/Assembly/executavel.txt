@@ -1,0 +1,3 @@
+nasm -f elf64 nome_do_arquivo.asm -o nome_do_executavel.o
+ld reynan.o -o reynan
+./reynan
